@@ -149,7 +149,7 @@ footer {
 }
 
 #services .container{
-    display: grid;
+    display: block;
     gap: 1.5rem;
 }
 #services article{
@@ -162,6 +162,10 @@ footer {
     gap: 1.5rem;
 }
 
+h1{
+    position: relative;
+    padding-left: 3rem;
+}
 h1::before{
     content: "";
     position:absolute;
@@ -224,8 +228,6 @@ h1::before{
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px){
     #results {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         background: var(--blue);
         color: white;
     }
@@ -266,8 +268,7 @@ h1::before{
         width: 100%;
     }
     .services-grid{
-    display: grid;
-    gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
     }
     form{
         grid-template-columns: 1fr 1fr;
